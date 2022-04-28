@@ -1,0 +1,209 @@
+@import "resset.scss";
+
+//$black: #000000;
+//$orange: #FF6336;
+
+// @mixin regular() {
+//   font-family: 'Montserrat', sans-serif;
+//   font-weight: 400;
+// }
+
+// @mixin semiBold() {
+//   font-family: 'Montserrat', sans-serif;
+//   font-weight: 600;
+// }
+
+@import "400-575.scss";
+@import "576-767.scss";
+@import "768-991.scss";
+@import "992-1199.scss";
+
+
+.btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.header {
+    padding: 10px;
+    background-color: aliceblue;
+
+    &__container {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    &__container a {
+        text-decoration: none;
+        color: #000;
+    }
+
+    &__blog a {
+        height: 30px;
+        display: flex;
+        text-align: center;
+        align-items: center;
+        padding: 0px 5px;
+        font-size: 16px;
+    }
+
+    &__blog a:hover {
+        background-color: rgb(101, 101, 196);
+        border-radius: 10px;
+        color: #fff;
+    }
+
+    &__list {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        &-item a {
+            height: 30px;
+            display: flex;
+            text-align: center;
+            align-items: center;
+            padding: 0px 5px;
+            font-size: 16px;
+        }
+
+        &-item:not(:last-child) {
+            margin-right: 20px;
+        }
+
+        &-item>a:hover {
+            background-color: rgb(101, 101, 196);
+            border-radius: 10px;
+            color: #fff;
+        }
+    }
+
+}
+
+.page {
+    margin: 30px 0px 50px 0px;
+
+    &__logo {
+        max-width: 400px;
+        margin: 0 auto;
+        cursor: pointer;
+        text-align: center;
+    }
+
+    &__logo img {
+        width: 300px;
+    }
+
+    &__form {
+        width: 600px;
+        display: flex;
+        justify-content: center;
+        margin: 10px auto;
+    }
+
+    &__input {
+        width: 500px;
+        border: 1px solid rgb(225, 217, 217);
+        border-radius: 10px 0px 0px 10px;
+        padding-left: 10px;
+        border-right: none;
+    }
+    &__input:focus {
+        outline: none;
+    }
+
+    &__btn {
+        background-color: #ffff;
+        border: 1px  solid rgb(225, 217, 217);
+        border-radius: 0px 10px 10px 0px;
+        border-left: none;
+        cursor: pointer;
+    }
+
+    &__btn img {
+        opacity: 0.5;
+    }
+
+    &__content {
+        width: 600px;
+        margin: 60px auto 0px auto;
+    }
+
+}
+
+.block__content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    &-left {
+        width: 400px;
+        padding: 0px 25px;
+    }
+    &-title {
+        font-size: 30px;
+        font-weight: 600;
+    }
+    &-text {
+        padding: 20px 0px;
+    }
+    &-img img {
+        width: 150px;
+    }
+    &-btn button {
+        height: 30px;
+        background-color: #fff;
+        border: 1px  solid rgb(225, 217, 217);
+        border-radius: 5px;
+        cursor: pointer;
+    }
+    &-btn button:hover {
+        background-color: rgb(101, 101, 196);
+        color: #ffff;
+    }
+
+}
+
+.inform {
+    &__title {
+        text-align: center;
+        font-size: 25px;
+        font-weight: 600;
+    }
+    &__blocks {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: wrap;
+    }
+    &__block {
+        width: 20%;
+        padding: 20px;;
+        &-container {
+            background-color: rgb(210, 247, 245);
+            padding: 10px;
+            border: 1px solid rgb(227, 219, 219);
+            border-radius: 10px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        &-title {
+            font-size: 20px;
+            font-weight: 600;
+        }
+        &-text {
+            margin: 20px 0px;
+        }
+        &-img img {
+            width: 100px;
+        }
+    }
+}
