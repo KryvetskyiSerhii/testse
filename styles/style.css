@@ -69,6 +69,7 @@ table {
 .header {
   padding: 10px;
   background-color: aliceblue;
+  position: relative;
 }
 
 .header__container {
@@ -98,7 +99,7 @@ table {
       -ms-flex-align: center;
           align-items: center;
   padding: 0px 5px;
-  font-size: 16px;
+  font-size: 18px;
 }
 
 .header__blog a:hover {
@@ -107,7 +108,37 @@ table {
   color: #fff;
 }
 
-.header__list {
+.header__icon, .header__icon ul {
+  list-style: none;
+}
+
+.header__icon ul {
+  position: absolute;
+  top: 40px;
+  right: 30px;
+  border-top: none;
+  border-radius: 0px 0px 10px 10px;
+  padding: 40px 0px 10px 5px;
+  width: 200px;
+  background-color: aliceblue;
+  display: none;
+  -webkit-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+}
+
+.header__icon ul li:not(:last-child) {
+  margin-bottom: 20px;
+}
+
+.header__icon ul li:hover {
+  opacity: 0.5;
+}
+
+.header__icon li:hover ul {
+  display: block;
+}
+
+.header__right {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -117,33 +148,12 @@ table {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-}
-
-.header__list-item a {
-  height: 30px;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  text-align: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  padding: 0px 5px;
-  font-size: 16px;
-}
-
-.header__list-item:not(:last-child) {
-  margin-right: 20px;
-}
-
-.header__list-item > a:hover {
-  background-color: #6565c4;
-  border-radius: 10px;
-  color: #fff;
+  width: 200px;
+  cursor: pointer;
 }
 
 .page {
-  margin: 30px 0px 50px 0px;
+  margin: 50px 0px 70px 0px;
 }
 
 .page__logo {
@@ -170,6 +180,7 @@ table {
 
 .page__input {
   width: 500px;
+  height: 45px;
   border: 1px solid #e1d9d9;
   border-radius: 10px 0px 0px 10px;
   padding-left: 10px;
@@ -261,7 +272,7 @@ table {
 }
 
 .inform__block {
-  width: 20%;
+  width: 25%;
   padding: 20px;
 }
 
