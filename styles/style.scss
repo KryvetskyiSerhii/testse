@@ -1,17 +1,5 @@
 @import "resset.scss";
 
-//$black: #000000;
-//$orange: #FF6336;
-
-// @mixin regular() {
-//   font-family: 'Montserrat', sans-serif;
-//   font-weight: 400;
-// }
-
-// @mixin semiBold() {
-//   font-family: 'Montserrat', sans-serif;
-//   font-weight: 600;
-// }
 
 @import "400-575.scss";
 @import "576-767.scss";
@@ -32,9 +20,10 @@
 }
 
 .header {
-    padding: 10px;
-    background-color: aliceblue;
-    position: relative;
+        width: 100%;
+        padding: 10px;
+        background-color: aliceblue;
+        
 
 
     &__container {
@@ -63,10 +52,12 @@
         color: #fff;
     }
 
-    &__icon, &__icon ul {
+    &__icon,
+    &__icon ul {
         list-style: none;
 
     }
+
     &__icon ul {
         position: absolute;
         top: 40px;
@@ -78,52 +69,33 @@
         background-color: aliceblue;
         display: none;
         transition: all 0.5s ease;
+        height: 100vh;
     }
+
+    &__icon ul li {
+        padding-left: 30px;
+    }
+
     &__icon ul li:not(:last-child) {
         margin-bottom: 20px;
     }
+
     &__icon ul li:hover {
         opacity: 0.5;
     }
+
     &__icon li:hover ul {
         display: block;
     }
-   
-    // &__list {
-    //     display: flex;
-    //     justify-content: space-between;
-    //     align-items: left;
-    //     flex-direction: column;
-    //     padding-left: 10px;
-    //     &-item a {
-    //         height: 30px;
-    //         display: flex;
-    //         text-align: center;
-    //         align-items: center;
-    //         padding: 0px 5px;
-    //         font-size: 16px;
-    //         text-decoration: none;
-    //         color:#000;
-    //     }
 
-    //     &-item:not(:last-child) {
-    //         margin-bottom: 20px;
-    //     }
-
-    //     &-item>a:hover {
-    //         background-color: rgb(101, 101, 196);
-    //         border-radius: 10px;
-    //         color: #fff;
-    //     }
-    // }
     &__right {
         display: flex;
         justify-content: space-between;
         align-items: center;
-        width: 200px;
+        max-width: 200px;
         cursor: pointer;
     }
-    
+
 }
 
 .page {
@@ -137,14 +109,15 @@
     }
 
     &__logo img {
-        width: 300px;
+        max-width: 300px;
     }
 
     &__form {
-        width: 600px;
+        max-width: 600px;
         display: flex;
         justify-content: center;
         margin: 10px auto;
+        padding: 15px;
     }
 
     &__input {
@@ -155,13 +128,14 @@
         padding-left: 10px;
         border-right: none;
     }
+
     &__input:focus {
         outline: none;
     }
 
     &__btn {
         background-color: #ffff;
-        border: 1px  solid rgb(225, 217, 217);
+        border: 1px solid rgb(225, 217, 217);
         border-radius: 0px 10px 10px 0px;
         border-left: none;
         cursor: pointer;
@@ -172,7 +146,7 @@
     }
 
     &__content {
-        width: 600px;
+        max-width: 600px;
         margin: 60px auto 0px auto;
     }
 
@@ -182,27 +156,33 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
+
     &-left {
         width: 400px;
         padding: 0px 25px;
     }
+
     &-title {
         font-size: 30px;
         font-weight: 600;
     }
+
     &-text {
         padding: 20px 0px;
     }
+
     &-img img {
-        width: 150px;
+        max-width: 150px;
     }
+
     &-btn button {
         height: 30px;
         background-color: #fff;
-        border: 1px  solid rgb(225, 217, 217);
+        border: 1px solid rgb(225, 217, 217);
         border-radius: 5px;
         cursor: pointer;
     }
+
     &-btn button:hover {
         background-color: rgb(101, 101, 196);
         color: #ffff;
@@ -216,15 +196,18 @@
         font-size: 25px;
         font-weight: 600;
     }
+
     &__blocks {
         display: flex;
         justify-content: center;
         align-items: center;
         flex-wrap: wrap;
     }
+
     &__block {
-        width: 25%;
-        padding: 20px;;
+        width: 300px;
+        padding: 20px;
+
         &-container {
             background-color: rgb(210, 247, 245);
             padding: 10px;
@@ -234,13 +217,16 @@
             flex-direction: column;
             align-items: center;
         }
+
         &-title {
             font-size: 20px;
             font-weight: 600;
         }
+
         &-text {
             margin: 20px 0px;
         }
+
         &-img img {
             width: 100px;
         }

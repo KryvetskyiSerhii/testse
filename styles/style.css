@@ -48,6 +48,38 @@ table {
   border-spacing: 0;
 }
 
+@media (min-width: 300px) and (max-width: 575px) {
+  .header__icon,
+  .header__icon ul {
+    list-style: none;
+  }
+  .header__icon ul {
+    position: absolute;
+    top: 40px;
+    right: 0px;
+    left: 10px;
+    border-top: none;
+    border-radius: 0px 0px 10px 10px;
+    padding: 40px 0px 10px 5px;
+    width: 200px;
+    background-color: aliceblue;
+    display: none;
+    height: 100vh;
+  }
+  .block__content-img img {
+    width: 100px;
+  }
+  .inform__blocks {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .inform__block {
+    width: 80%;
+  }
+}
+
 .btn {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -67,9 +99,9 @@ table {
 }
 
 .header {
+  width: 100%;
   padding: 10px;
   background-color: aliceblue;
-  position: relative;
 }
 
 .header__container {
@@ -108,7 +140,8 @@ table {
   color: #fff;
 }
 
-.header__icon, .header__icon ul {
+.header__icon,
+.header__icon ul {
   list-style: none;
 }
 
@@ -124,6 +157,11 @@ table {
   display: none;
   -webkit-transition: all 0.5s ease;
   transition: all 0.5s ease;
+  height: 100vh;
+}
+
+.header__icon ul li {
+  padding-left: 30px;
 }
 
 .header__icon ul li:not(:last-child) {
@@ -148,7 +186,7 @@ table {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  width: 200px;
+  max-width: 200px;
   cursor: pointer;
 }
 
@@ -164,11 +202,11 @@ table {
 }
 
 .page__logo img {
-  width: 300px;
+  max-width: 300px;
 }
 
 .page__form {
-  width: 600px;
+  max-width: 600px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -176,6 +214,7 @@ table {
       -ms-flex-pack: center;
           justify-content: center;
   margin: 10px auto;
+  padding: 15px;
 }
 
 .page__input {
@@ -204,7 +243,7 @@ table {
 }
 
 .page__content {
-  width: 600px;
+  max-width: 600px;
   margin: 60px auto 0px auto;
 }
 
@@ -235,7 +274,7 @@ table {
 }
 
 .block__content-img img {
-  width: 150px;
+  max-width: 150px;
 }
 
 .block__content-btn button {
@@ -272,7 +311,7 @@ table {
 }
 
 .inform__block {
-  width: 25%;
+  width: 300px;
   padding: 20px;
 }
 
