@@ -101,7 +101,7 @@ table {
 .header {
   width: 100%;
   padding: 10px;
-  background-color: aliceblue;
+  background-color: bisque;
 }
 
 .header__container {
@@ -154,7 +154,7 @@ table {
   border-radius: 0px 0px 10px 10px;
   padding: 40px 0px 10px 5px;
   width: 200px;
-  background-color: aliceblue;
+  background-color: bisque;
   display: none;
   -webkit-transition: all 0.5s ease;
   transition: all 0.5s ease;
